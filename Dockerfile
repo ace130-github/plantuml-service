@@ -13,7 +13,7 @@ USER root
 RUN adduser -S app \
   && apk update \
   && apk upgrade \
-  && apk add graphviz curl \
+  && apk add graphviz curl fontconfig ttf-dejavu \
   && mkdir -p ${PLANTUML_SERVICE_BIN_DIR} \
   && curl -L ${PLANTUML_SERVICE_JAR_URL} -o ${PLANTUML_SERVICE_PATH} \
   && chown -R app ${PLANTUML_SERVICE_BIN_DIR}
